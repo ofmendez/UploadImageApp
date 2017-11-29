@@ -1,0 +1,19 @@
+
+<p id="notice"><%= notice %></p>
+<p>
+  <%= image_tag @image.image.url %>
+</p>
+ 
+
+
+
+
+<p>
+  <strong>Pathimage:</strong>
+
+  <%= @image.pathImage %>
+ <%= @image.image %>
+</p>
+
+<%= link_to 'Edit', edit_image_path(@image), class: "btn-large waves-effect waves-light" %> |
+<%= link_to 'Back', images_path, class: "btn-large waves-effect waves-light" %>

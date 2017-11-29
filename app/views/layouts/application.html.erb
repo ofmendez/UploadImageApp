@@ -7,8 +7,20 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+<body>
 
-  <body>
+
+
+<nav>
+    <div class="nav-wrapper teal darken-3">
+
+<%= link_to images_path do %> 
+	 <i class="material-icons large center" >home</i> 
+<%end %>MIERDA
+    </div>
+  </nav>
+  <div class="container">  
     <%= yield %>
-  </body>
+  </div>                   
+</body>
 </html>

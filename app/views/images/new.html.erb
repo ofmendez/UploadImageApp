@@ -1,0 +1,11 @@
+<h1>Selecciona la imagen</h1>
+
+
+<%= render 'form', image: @image %>
+<br>
+<%= link_to 'atras', images_path, class: "btn-large waves-effect waves-light"  %>
+<script>
+	$("#image_image").click(function(){
+		$("#subirIM").css("display","inline");
+	})
+</script>
