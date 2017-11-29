@@ -16,8 +16,8 @@
     <% @images.each do |image| %>
       <tr>
 	<td><%= image_tag image.image.thumb.url %></td>
-        <td><%= image.image %></td>
-	<td><%= image.created_at %></td>
+        <td><%= truncate(image.image, :length => 17) %></td>
+	      <td><%= image.created_at %></td>
         <td><%= link_to 'Ver', image, class:"btn" %></td>
         <td><%= link_to 'Editar', edit_image_path(image) , class:"btn"%></td>
       </tr>
