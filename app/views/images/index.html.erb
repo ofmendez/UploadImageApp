@@ -6,7 +6,8 @@
   <thead>
     <tr>
       <th>Imagen</th>
-      <th>Ruta</th>
+      <th>Nombre</th>
+	<th>Creada el</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,7 +16,8 @@
     <% @images.each do |image| %>
       <tr>
 	<td><%= image_tag image.image.thumb.url %></td>
-        <td><%= image.image.url %></td>
+        <td><%= image.image %></td>
+	<td><%= image.created_at %></td>
         <td><%= link_to 'Ver', image, class:"btn" %></td>
         <td><%= link_to 'Editar', edit_image_path(image) , class:"btn"%></td>
       </tr>
