@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20171129022654) do
 
-  create_table "images", force: :cascade do |t|
+  create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "image"
     t.string "pathImage"
     t.datetime "created_at", null: false
