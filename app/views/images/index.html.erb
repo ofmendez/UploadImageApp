@@ -16,7 +16,7 @@
     <% @images.each do |image| %>
       <tr>
 	      <td><%= image_tag image.image.url, :size => '50x50' %></td>
-        <td><%= truncate(image.image, :length => 17) %></td>
+        <td><%= if image.image.length > 17 then '...'else '' end +image.image.to_s[-17..-1] %></td>
 	      <td><%= image.created_at %></td>
         <td><%= link_to 'Ver', image, class:"btn" %></td>
         <td><%= link_to 'Editar', edit_image_path(image) , class:"btn"%></td>
